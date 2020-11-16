@@ -1,5 +1,7 @@
 # DiscordVehicleRestrictions
 
+## Documentation: https://docs.badger.store/fivem-discord-scripts/discordvehiclerestrictions
+
 ## What is it?
 DiscordVehiclesRestrictions is a Discord based vehicle restriction script. I have previously made a script like this in the past, but it was made when I was barely considered a FiveM script developer. Due to the sloppy code practices within that script, I decided to rewrite the script and include something at most people had inquired about within the old one: Inheritance.
 
