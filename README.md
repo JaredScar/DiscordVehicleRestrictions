@@ -9,6 +9,9 @@ https://forum.cfx.re/t/discordvehiclesrestrict/599594
 ## Images
 https://i.gyazo.com/415c775a6cd94f194e22c9843778bdb0.gif
 
+## Requirement
+https://forum.cfx.re/t/release-badger-discord-api/1698464
+
 ## Configuration
 * It should be noted that for `Config.Inheritances`, the roleNames and roleIDs should match up with the ones specified in `Config.VehicleRestrictions`.
 
