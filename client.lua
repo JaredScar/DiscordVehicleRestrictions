@@ -21,18 +21,21 @@ Citizen.CreateThread(function()
 		else
 			veh = GetVehiclePedIsTryingToEnter(ped)
         end
-        if lastChecked ~= nil and lastChecked == veh and (hasPerm ~= nil) and not hasPerm then 
-            if driver == ped then
-                ShowInfo(Config.RestrictedMessage)
-                DeleteEntity(veh)
-                ClearPedTasksImmediately(ped)
+        if (veh ~= nil) then 
+            local driver = GetPedInVehicleSeat(veh, -1)
+            if lastChecked ~= nil and lastChecked == veh and (hasPerm ~= nil) and not hasPerm then 
+                if driver == ped then
+                    ShowInfo(Config.RestrictedMessage)
+                    DeleteEntity(veh)
+                    ClearPedTasksImmediately(ped)
+                end
+                return;
             end
-            return;
         end
 		
-		if veh ~= nil and DoesEntityExist(veh) and lastChecked ~= veh then
+        if veh ~= nil and DoesEntityExist(veh) and lastChecked ~= veh then
+            local driver = GetPedInVehicleSeat(veh, -1)
 			local model = GetEntityModel(veh)
-			local driver = GetPedInVehicleSeat(veh, -1)
 			-- Check if it has one of the restricted vehicles
             local requiredPerm = nil;
             hasPerm = false;
