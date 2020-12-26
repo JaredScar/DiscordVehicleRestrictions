@@ -22,19 +22,19 @@ Citizen.CreateThread(function()
 			veh = GetVehiclePedIsTryingToEnter(ped)
         end
         local model = GetEntityModel(veh)
-        if (veh ~= nil) then 
+        if (model ~= nil) then 
             local driver = GetPedInVehicleSeat(veh, -1)
-            if lastChecked ~= nil and model ~= nil and lastChecked == model and (hasPerm ~= nil) and not hasPerm then 
+            if (lastChecked ~= nil) and (lastChecked == model) and (hasPerm ~= nil) and (not hasPerm) then 
                 if driver == ped then
                     ShowInfo(Config.RestrictedMessage)
                     DeleteEntity(veh)
                     ClearPedTasksImmediately(ped)
                 end
-                return;
+                print("[DiscordVehicleRestrictions] Vehicle was last checked, but is not a driver...")
             end
         end
 		
-        if veh ~= nil and DoesEntityExist(veh) and lastChecked ~= veh then
+        if veh ~= nil and DoesEntityExist(veh) and lastChecked ~= model then
             local driver = GetPedInVehicleSeat(veh, -1)
 			-- Check if it has one of the restricted vehicles
             local requiredPerm = nil;
