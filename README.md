@@ -84,6 +84,6 @@ Config.Inheritances = {
     ['Head_Admin'] = {'Admin', 'Moderator'},
 }
 ```
-Thanks to @clewis329 for helping to test this, a well as providing the example configuration file :)  
+Thanks to @clewis329 for helping to test this, as well as providing the example configuration file :)  
 ## Download
 https://github.com/JaredScar/DiscordVehicleRestrictions
