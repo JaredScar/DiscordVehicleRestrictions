@@ -27,7 +27,7 @@ AddEventHandler("BadgerVehicles:CheckPermission", function()
                                 -- There is inheritted roles 
                                 for j = 1, #inheritedRoles do 
                                     userRoles[ inheritedRoles[j] ] = true;
-                                    print("[DiscordVehicleRestrictions] " .. GetPlayerName(src) .. " has inherited role: " .. tostring(role) );
+                                    print("[DiscordVehicleRestrictions] " .. GetPlayerName(src) .. " has inherited role: " .. tostring(inheritedRoles[j]) );
                                 end
                             end
                         end
