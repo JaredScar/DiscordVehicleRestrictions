@@ -42,10 +42,12 @@ Citizen.CreateThread(function()
             for role, val in pairs(myRoles) do 
                 if (val == true) then 
                     local vehicles = Config.VehicleRestrictions[role];
-                    for i = 1, #vehicles do 
-                        if GetHashKey(vehicles[i]) == model then 
-                            requiredPerm = true;
-                            hasPerm = true;
+                    if (vehicles ~= nil) then
+                        for i = 1, #vehicles do 
+                            if GetHashKey(vehicles[i]) == model then 
+                                requiredPerm = true;
+                                hasPerm = true;
+                            end
                         end
                     end
                 end
