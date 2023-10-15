@@ -1,6 +1,7 @@
 Config = {
 	RestrictedMessage = "~r~Restricted Vehicle Model.",
-	InheritanceEnabled = false
+	InheritanceEnabled = false,
+	VehicleDelete = true, -- Should the vehicle be deleted? If set to false, the user will just be kicked out...
 }
 
 Config.VehicleRestrictions = {
